@@ -87,16 +87,15 @@ namespace ExampleLineBot20170928.Controllers
 
                 //bot.PushMessage(Lineid, ButtonsTemplate);
                 //---------------------------------------------------------
-
-                return Ok();
             }
             catch (Exception ex)
             {
                 // 錯誤通知
                 Bot bot = new Bot(ChannelAccessToken);
                 bot.PushMessage("YourLineID", ex.Message);
-                return Ok();
             }
+
+            return Ok();
         }
     }
 }
